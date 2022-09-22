@@ -1,0 +1,120 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+body{
+	font-family: 思源黑體, 微軟正黑體, 蘋方黑體, Helvetica,  Arial , sans-serif , serif;
+	font-size: 16px;
+	line-height: 24px;
+	margin: auto;
+}
+
+.item img{
+	width: 100%;
+}
+
+.banner img{
+	width: 100%;
+}
+
+.header{
+	display: flex;
+	width: 100%;
+	background-color: rgb(199, 59, 59);
+	padding: 0px 40px;
+}
+
+.header .logo{
+	display: inline-block;
+	margin: 16px 0;
+	vertical-align: bottom;
+}
+
+h1{
+	text-indent: -9999px;
+}
+
+.header nav{
+	text-align: right;
+	width: 100%;
+	margin-right: 80px;
+}
+
+.header nav a{
+	color: #fff;
+	display: inline-block;
+	line-height: 72px;
+	padding: 0 16px;
+}
+
+.header nav a:hover{
+	color: yellow;
+	background-color: #888;
+}
+
+.path{
+	margin: 2%;
+	display: flex;
+	padding: 0 20px;
+}
+
+.path li{
+	display: inline-block;
+	line-height: 16px;
+}
+.path li +li::before{
+	content: '/';
+	margin: 0 4px;
+}
+
+.content{
+	text-align: center;
+	background-color: #ccc;
+	padding: 32px 144px;
+	margin: 32px auto;
+}
+
+h2{
+	font-size: 40px;
+	line-height: 56px;
+}
+
+h3{
+	font-size: 24px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.item{
+	padding: 16px;
+	text-align: center;
+	margin: 32px auto;
+}
+
+.footer{
+	background-color: #000;
+	color: #888;
+	font-size: 14px;
+	line-height: 32px;
+	text-align: center;
+	padding: 16px 0;
+}
+
+.about .item img{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+
+
+@media screen and (min-width:768px){
+	.item-group{
+		display: flex;
+	}
+	.products .item{
+		width: 50%;
+	}
+	
+}
