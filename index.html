@@ -5,21 +5,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>金魚稀飯版</title>
+  <title>金魚稀飯版響應式</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
   <div class="header">
-    <a href="#"><img class="logo" src="https://picsum.photos/80/40?random=1" alt="品牌名稱"></a>
-    <nav>
-      <a href="#">關於我們</a>
-      <a href="#">產品</a>
-      <a href="#">服務項目</a>
+    <nav class="nav">
+      <div class="nav-menu">
+        <div class="nav-brand">
+          <a href="#" class="text-black">logo</a>
+        </div>
+      </div>
+      <div>
+        <ul class="nav-item">
+          <li class="nav-link"><a href="#about" class="text-black">關於我們</a></li>
+          <li class="nav-link"><a href="#products" class="text-black">產品內容</a></li>
+          <li class="nav-link"><a href="#service" class="text-black">服務項目</a></li>
+        </ul>
+      </div>
+      <div class="social text-black">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+      <div class="toggle-collapse">
+        <div class="toggle-icon text-black">
+          <span><i class="fas fa-bars"></i></span>
+        </div>
+      </div>
     </nav>
   </div>
   <div class="banner">
-    <img src="https://picsum.photos/1400/500?random=2" alt="">
+    <img src="https://picsum.photos/1400/600?random=2" alt="">
   </div>
   <div class="path">
     <ul>
@@ -28,7 +48,7 @@
       <li>產品內容</li>
     </ul>
   </div>
-  <div class="about">
+  <div class="about" id="about">
     <div class="wrap">
       <div class="content">
         <h2>關於我們</h2>
@@ -53,20 +73,20 @@
       </div>
     </div>
   </div>
-<div class="products">
+<div class="products" id="products">
   <div class="wrap">
     <div class="item-group">
       <div class="item">
         <img src="https://picsum.photos/300/200/?random=10">
       </div>
       <div class="item">
-        <h3>title</h3>
+        <h3>產品內容</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae doloremque excepturi neque voluptas assumenda unde sed odio magni quam rerum distinctio, qui esse sit dolores error numquam obcaecati autem voluptatum!</p>
       </div>
     </div>
   </div>
 </div>
-<div class="service">
+<div class="service" id="service">
   <div class="wrap">
     <div class="content">
       <h2>服務項目</h2>
@@ -98,7 +118,9 @@
 </div>
 <div class="footer">
   <span>&copy;copyright Amos金魚稀飯版</span>
-  
 </div>
+
+<script src="all.js"></script>
+  
 </body>
 </html>

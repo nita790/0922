@@ -1,14 +1,73 @@
-*{
-	padding: 0;
+body{
+	font-family: 思源黑體, 微軟正黑體, 蘋方黑體, Helvetica,  Arial , sans-serif , serif;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin: auto;
+}
+
+nav{
+	padding: 0 2rem;
+	background-color:rgb(255, 225, 190);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: relative;
+	height: 5.5rem;
+	overflow: hidden;
+	transition: all 1s ease;
 	margin: 0;
+}
+
+.text-black{
+	color: #000;
+}
+
+a{
 	text-decoration: none;
 }
 
-body{
-	font-family: 思源黑體, 微軟正黑體, 蘋方黑體, Helvetica,  Arial , sans-serif , serif;
-	font-size: 16px;
-	line-height: 24px;
-	margin: auto;
+nav .nav-brand a{
+	display: block;
+	padding: 2rem 1.5rem;
+	font-size: 2rem;
+}
+
+nav .nav-item{
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0;
+}
+
+nav .nav-item .nav-link{
+	font-size: 1.2rem;
+	padding: 2rem 1.5rem;
+}
+
+nav .nav-item .nav-link:hover{
+	background-color: rgb(255, 170, 80);
+}
+
+nav .nav-item .nav-link:hover a{
+	color: rgb(255, 255, 255);
+}
+
+nav .social{
+	padding-top: 2rem;
+	padding-right: 1.5rem;
+}
+
+nav .social i{
+	padding: .4rem;
+}
+
+nav .toggle-collapse{
+	display: none;
+}
+
+.collapse{
+	height: 28rem;
 }
 
 .item img{
@@ -19,102 +78,121 @@ body{
 	width: 100%;
 }
 
-.header{
-	display: flex;
-	width: 100%;
-	background-color: rgb(199, 59, 59);
-	padding: 0px 40px;
-}
-
-.header .logo{
-	display: inline-block;
-	margin: 16px 0;
-	vertical-align: bottom;
-}
-
-h1{
-	text-indent: -9999px;
-}
-
-.header nav{
-	text-align: right;
-	width: 100%;
-	margin-right: 80px;
-}
-
-.header nav a{
-	color: #fff;
-	display: inline-block;
-	line-height: 72px;
-	padding: 0 16px;
-}
-
-.header nav a:hover{
-	color: yellow;
-	background-color: #888;
-}
-
 .path{
-	margin: 2%;
+	margin: 1.5rem;
 	display: flex;
-	padding: 0 20px;
+	padding: 0 2rem;
 }
 
 .path li{
 	display: inline-block;
-	line-height: 16px;
+	line-height: 1rem;
 }
 .path li +li::before{
 	content: '/';
-	margin: 0 4px;
+	margin: 0 .4rem;
+}
+
+.about .item img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
 }
 
 .content{
 	text-align: center;
 	background-color: #ccc;
-	padding: 32px 144px;
-	margin: 32px auto;
+	padding: 4rem 8rem;
+	margin: 2rem auto;
 }
 
 h2{
-	font-size: 40px;
-	line-height: 56px;
+	font-size: 2.5rem;
+	line-height: 5rem;
 }
 
 h3{
-	font-size: 24px;
-	line-height: 40px;
+	font-size: 1.5rem;
+	line-height: 2.5rem;
 	text-align: center;
 }
 
+.item-group{
+	display: flex;
+	flex-direction: row;
+	align-content: space-between;
+	width: 90%;
+	padding: 1rem 0;
+	margin: auto;
+}
+
 .item{
-	padding: 16px;
+	padding: 1rem;
 	text-align: center;
-	margin: 32px auto;
+}
+
+.item p{
+	width: 80%;
+	margin: auto;
+}
+
+.products .item{
+	width: 50%;
 }
 
 .footer{
 	background-color: #000;
-	color: #888;
-	font-size: 14px;
-	line-height: 32px;
+	color: #999;
+	font-size: .8rem;
+	line-height: 2rem;
 	text-align: center;
-	padding: 16px 0;
+	padding: 1rem 0;
+	margin-top: 2rem;
 }
 
-.about .item img{
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-}
-
-
-@media screen and (min-width:768px){
-	.item-group{
-		display: flex;
+@media screen and (max-width:768px){
+	nav{
+		flex-direction: column;
 	}
+
+	nav .nav-item{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	nav .toggle-collapse{
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 2rem;
+		cursor: pointer;
+	}
+
+	nav .toggle-icon{
+		font-size: 1.5rem;
+	}
+
+	.content{
+		padding: 4rem;
+		margin: auto;
+	}
+
+	.item-group{
+		flex-direction: column;
+	}
+
 	.products .item{
-		width: 50%;
+		width: 100%;
+	}
+
+	.text-black{
+		text-align: center;
 	}
 	
+	nav .social{
+		margin-bottom: 2rem;
+		padding-right: 0rem;
+	}
+
 }
